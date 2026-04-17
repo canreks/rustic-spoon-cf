@@ -13,16 +13,22 @@ function handleNewsletter(e) {
   e.preventDefault();
   const inp = document.getElementById('nlInput');
   const btn = e.target.querySelector('button');
+
   if (!inp || !inp.value.includes('@')) {
     inp.style.outline = '2px solid #b5341a';
     setTimeout(() => inp.style.outline = '', 2000);
     return;
   }
+
   const orig = btn.textContent;
   btn.textContent = '✓ Subscribed';
   btn.style.background = '#2e7d32';
   inp.value = '';
-  setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 4000);
+
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.style.background = '';
+  }, 4000);
 }
 
 /* ── Contact form ── */
@@ -30,18 +36,28 @@ function handleContact(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button[type=submit]');
   const orig = btn.textContent;
+
   btn.textContent = '✓ Message sent — thanks!';
   btn.style.background = '#2e7d32';
   e.target.reset();
-  setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 5000);
+
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.style.background = '';
+  }, 5000);
 }
 
-/* ── Blog category filter ── */
+/* ── Blog category filter (FIXED) ── */
 function filterBlog(btn, cat) {
   document.querySelectorAll('.bf').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
+
   document.querySelectorAll('.blog-card').forEach(c => {
-    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+    if (cat === 'all' || c.dataset.cat === cat) {
+      c.style.display = '';
+    } else {
+      c.style.display = 'none';
+    }
   });
 }
 
