@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — The Rustic Spoon</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .not-found {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem clamp(1.2rem, 5%, 3rem);
+    }
+    .not-found-icon {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      animation: float 4s ease-in-out infinite;
+      display: block;
+    }
+    .not-found h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: var(--ink);
+      margin-bottom: .75rem;
+      letter-spacing: -.02em;
+    }
+    .not-found p {
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 2rem;
+    }
+    .not-found-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .not-found-suggestions {
+      margin-top: 3.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid var(--border);
+      width: 100%;
+      max-width: 800px;
+    }
+    .not-found-suggestions h2 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .not-found-suggestions h2 em { color: var(--accent); font-style: italic; }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <nav class="nav-wrap" aria-label="Main navigation">
+    <a href="/index.html" class="site-logo">The Rustic <em>Spoon</em></a>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/blog/index.html">Recipes</a></li>
+      <li><a href="/about/index.html">About</a></li>
+      <li><a href="/contact/index.html">Contact</a></li>
+      <li><a href="/blog/index.html" class="nav-cta">Browse All</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="not-found">
+    <span class="not-found-icon" aria-hidden="true">🍳</span>
+    <h1>This Page Went Missing</h1>
+    <p>We couldn't find what you were looking for — it may have moved or never existed. While you're here, there are plenty of good recipes waiting.</p>
+    <div class="not-found-links">
+      <a href="/index.html" class="btn btn-solid">Back to Home</a>
+      <a href="/blog/index.html" class="btn btn-ghost">Browse Recipes</a>
+    </div>
+
+    <div class="not-found-suggestions">
+      <h2>Popular <em>Right Now</em></h2>
+      <div class="recipe-grid">
+        <article class="recipe-card">
+          <a href="/blog/pasta-al-limone.html">
+            <div class="rc-thumb"><span>🍝</span><span class="rc-cat" style="background:#b5341a">Pasta</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="/blog/pasta-al-limone.html">Pasta al Limone</a></h3>
+            <p>Silky lemon-cream spaghetti in 25 minutes.</p>
+            <div class="rc-meta"><span>⏱ 25 min</span><span>⭐ Easy</span></div>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <a href="/blog/brown-butter-banana-bread.html">
+            <div class="rc-thumb"><span>🍌</span><span class="rc-cat" style="background:#6b4226">Baking</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="/blog/brown-butter-banana-bread.html">Brown Butter Banana Bread</a></h3>
+            <p>The banana bread worth the brown butter step.</p>
+            <div class="rc-meta"><span>⏱ 65 min</span><span>⭐ Easy</span></div>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <a href="/blog/mushroom-risotto.html">
+            <div class="rc-thumb"><span>🍄</span><span class="rc-cat" style="background:#3d2b1f">Mains</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="/blog/mushroom-risotto.html">Wild Mushroom Risotto</a></h3>
+            <p>Porcini-powered and worth every stir.</p>
+            <div class="rc-meta"><span>⏱ 55 min</span><span>🌱 Vegetarian</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/index.html" class="site-logo">The Rustic <em>Spoon</em></a>
+        <p>A home cooking blog celebrating honest ingredients and the pleasure of cooking from scratch.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Recipes</h4>
+        <a href="/blog/pasta-al-limone.html">Pasta al Limone</a>
+        <a href="/blog/roasted-tomato-soup.html">Tomato Soup</a>
+        <a href="/blog/brown-butter-banana-bread.html">Banana Bread</a>
+        <a href="/blog/dal-tadka.html">Dal Tadka</a>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="/about/index.html">About</a>
+        <a href="/contact/index.html">Contact</a>
+        <a href="/privacy/index.html">Privacy Policy</a>
+        <a href="/terms/index.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Rustic Spoon. All rights reserved.</p>
+      <nav><a href="/privacy/index.html">Privacy</a><a href="/terms/index.html">Terms</a><a href="/contact/index.html">Contact</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
+</body>
+</html>

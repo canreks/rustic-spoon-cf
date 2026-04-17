@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Recipes — The Rustic Spoon</title>
+  <meta name="description" content="Browse all recipes on The Rustic Spoon — weeknight pasta, seasonal soups, weekend baking projects, and vegetarian mains, all tested in a real home kitchen." />
+  <meta property="og:title" content="All Recipes — The Rustic Spoon" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://therusticspoon.com/blog/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <nav class="nav-wrap" aria-label="Main navigation">
+    <a href="../index.html" class="site-logo">The Rustic <em>Spoon</em></a>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html" class="active">Recipes</a></li>
+      <li><a href="../about/index.html">About</a></li>
+      <li><a href="../contact/index.html">Contact</a></li>
+      <li><a href="index.html" class="nav-cta">Browse All</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-banner">
+    <h1>All <em>Recipes</em></h1>
+    <p>Over 80 tested recipes. Filter by category below or scroll to explore everything.</p>
+  </div>
+
+  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">
+    <!-- AdSense leaderboard -->
+    <span>Advertisement</span>
+  </div>
+
+  <section style="padding:3.5rem 0 5rem">
+    <div class="wrap">
+      <nav class="blog-filter" aria-label="Filter by category">
+        <button class="bf on" onclick="filterBlog(this,'all')">All</button>
+        <button class="bf" onclick="filterBlog(this,'breakfast')">🥞 Breakfast</button>
+        <button class="bf" onclick="filterBlog(this,'soup')">🍵 Soups</button>
+        <button class="bf" onclick="filterBlog(this,'pasta')">🍝 Pasta</button>
+        <button class="bf" onclick="filterBlog(this,'baking')">🍞 Baking</button>
+        <button class="bf" onclick="filterBlog(this,'vegetarian')">🌱 Vegetarian</button>
+        <button class="bf" onclick="filterBlog(this,'mains')">🍽 Mains</button>
+        <button class="bf" onclick="filterBlog(this,'desserts')">🍮 Desserts</button>
+      </nav>
+
+      <div class="blog-grid">
+
+        <article class="recipe-card blog-card" data-cat="pasta">
+          <a href="pasta-al-limone.html">
+            <div class="rc-thumb"><span>🍝</span><span class="rc-cat" style="background:#b5341a">Pasta</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="pasta-al-limone.html">Pasta al Limone</a></h3>
+            <p>Silky spaghetti in a lemon-cream-Parmesan sauce. A weeknight staple ready in 25 minutes.</p>
+            <div class="rc-meta"><span>⏱ 25 min</span><span>🍽 4 servings</span><span>⭐ Easy</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="baking">
+          <a href="brown-butter-banana-bread.html">
+            <div class="rc-thumb"><span>🍌</span><span class="rc-cat" style="background:#6b4226">Baking</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="brown-butter-banana-bread.html">Brown Butter Banana Bread</a></h3>
+            <p>Nutty, moist, and intensely flavoured. The brown butter changes everything.</p>
+            <div class="rc-meta"><span>⏱ 65 min</span><span>🍞 1 loaf</span><span>⭐ Easy</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="soup">
+          <a href="roasted-tomato-soup.html">
+            <div class="rc-thumb"><span>🍅</span><span class="rc-cat" style="background:#b5341a">Soups</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="roasted-tomato-soup.html">Slow-Roasted Tomato Soup</a></h3>
+            <p>Roasting concentrates supermarket tomatoes into something genuinely extraordinary.</p>
+            <div class="rc-meta"><span>⏱ 2 hr 20 min</span><span>🌱 Vegan</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="vegetarian">
+          <a href="dal-tadka.html">
+            <div class="rc-thumb"><span>🍲</span><span class="rc-cat" style="background:#2e7d32">Vegetarian</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="dal-tadka.html">Dal Tadka with Garlic Tarka</a></h3>
+            <p>Warming red lentils with a sizzling tarka of mustard seeds, cumin, and garlic.</p>
+            <div class="rc-meta"><span>⏱ 55 min</span><span>🍽 4 servings</span><span>🌶 Medium</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="baking">
+          <a href="index.html">
+            <div class="rc-thumb"><span>🥧</span><span class="rc-cat" style="background:#b5341a">Baking</span></div>
+          </a>
+          <div class="rc-body">
+            <h3>Rustic Peach &amp; Almond Galette</h3>
+            <p>A free-form summer tart with frangipane cream and jammy caramelised peaches.</p>
+            <div class="rc-meta"><span>⏱ 50 min</span><span>🍑 Serves 6</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="mains">
+          <a href="chicken-shawarma.html">
+            <div class="rc-thumb"><span>🫓</span><span class="rc-cat" style="background:#b5341a">Mains</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="chicken-shawarma.html">Sheet-Pan Chicken Shawarma</a></h3>
+            <p>Yoghurt-marinated chicken thighs with warm spices, roasted until caramelised at the edges.</p>
+            <div class="rc-meta"><span>⏱ 40 min + marinade</span><span>🍽 4 servings</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="mains">
+          <a href="mushroom-risotto.html">
+            <div class="rc-thumb"><span>🍄</span><span class="rc-cat" style="background:#3d2b1f">Mains</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="mushroom-risotto.html">Wild Mushroom Risotto</a></h3>
+            <p>Porcini, chestnut mushrooms, white wine, and a shower of aged Parmesan. Worth every stir.</p>
+            <div class="rc-meta"><span>⏱ 55 min</span><span>🌱 Vegetarian</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="breakfast">
+          <a href="ricotta-pancakes.html">
+            <div class="rc-thumb"><span>🥞</span><span class="rc-cat" style="background:#6b4226">Breakfast</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="ricotta-pancakes.html">Ricotta Pancakes with Honey</a></h3>
+            <p>Cloud-light and subtly tangy. The weekend breakfast upgrade you've been missing.</p>
+            <div class="rc-meta"><span>⏱ 25 min</span><span>Makes 10</span></div>
+          </div>
+        </article>
+
+        <article class="recipe-card blog-card" data-cat="desserts">
+          <a href="creme-caramel.html">
+            <div class="rc-thumb"><span>🍮</span><span class="rc-cat" style="background:#3d2b1f">Desserts</span></div>
+          </a>
+          <div class="rc-body">
+            <h3><a href="creme-caramel.html">Classic Crème Caramel</a></h3>
+            <p>Wobbly, silky, and perfectly bittersweet. The French bistro dessert that never goes out of style.</p>
+            <div class="rc-meta"><span>⏱ 1 hr + chilling</span><span>🍽 Serves 6</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo">The Rustic <em>Spoon</em></a>
+        <p>A home cooking blog celebrating honest ingredients, seasonal produce, and the pleasure of cooking from scratch.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Recipes</h4>
+        <a href="pasta-al-limone.html">Pasta al Limone</a>
+        <a href="roasted-tomato-soup.html">Tomato Soup</a>
+        <a href="brown-butter-banana-bread.html">Banana Bread</a>
+        <a href="dal-tadka.html">Dal Tadka</a>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../about/index.html">About</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../privacy/index.html">Privacy Policy</a>
+        <a href="../terms/index.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Rustic Spoon. All rights reserved.</p>
+      <nav><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a><a href="../contact/index.html">Contact</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

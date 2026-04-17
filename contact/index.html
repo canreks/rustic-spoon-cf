@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — The Rustic Spoon</title>
+  <meta name="description" content="Get in touch with The Rustic Spoon — recipe questions, collaboration enquiries, or just to say hello." />
+  <meta property="og:title" content="Contact — The Rustic Spoon" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://therusticspoon.com/contact/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <nav class="nav-wrap" aria-label="Main navigation">
+    <a href="../index.html" class="site-logo">The Rustic <em>Spoon</em></a>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../blog/index.html">Recipes</a></li>
+      <li><a href="../about/index.html">About</a></li>
+      <li><a href="index.html" class="active">Contact</a></li>
+      <li><a href="../blog/index.html" class="nav-cta">Browse All</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-banner">
+    <h1>Say <em>Hello</em></h1>
+    <p>Recipe questions, collaboration enquiries, or feedback — we read everything.</p>
+  </div>
+
+  <div class="ad-slot ad-leaderboard" aria-label="Advertisement"><span>Advertisement</span></div>
+
+  <div class="contact-wrap">
+    <div class="contact-intro">
+      <h2>Send Us a Message</h2>
+      <p>Fill in the form below and we'll reply within 3–5 business days. For time-sensitive press enquiries, please note "Urgent" in your subject line.</p>
+    </div>
+
+    <form onsubmit="handleContact(event)" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="c-first">First Name <span style="color:var(--accent)">*</span></label>
+          <input id="c-first" name="first" type="text" placeholder="Your first name" required autocomplete="given-name" />
+        </div>
+        <div class="field">
+          <label for="c-last">Last Name</label>
+          <input id="c-last" name="last" type="text" placeholder="Your last name" autocomplete="family-name" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="c-email">Email <span style="color:var(--accent)">*</span></label>
+        <input id="c-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="c-subject">Topic <span style="color:var(--accent)">*</span></label>
+        <select id="c-subject" name="subject" required>
+          <option value="" disabled selected>Choose a topic…</option>
+          <option value="recipe">Recipe question or feedback</option>
+          <option value="collab">Collaboration or partnership</option>
+          <option value="press">Press or media</option>
+          <option value="technical">Technical issue</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-message">Message <span style="color:var(--accent)">*</span></label>
+        <textarea id="c-message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid" style="width:100%;text-align:center;padding:1rem;font-size:.95rem">Send Message</button>
+    </form>
+
+    <div class="contact-aside">
+      <h3>Other Ways to Reach Us</h3>
+      <p><strong>Email:</strong> hello@therusticspoon.com<br/>We respond to all messages within 3–5 business days.</p>
+      <p><strong>Partnerships:</strong> We consider collaborations with brands that genuinely align with our values around seasonal, quality cooking. All sponsored content is clearly disclosed.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo">The Rustic <em>Spoon</em></a>
+        <p>A home cooking blog celebrating honest ingredients and the pleasure of cooking from scratch.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Recipes</h4>
+        <a href="../blog/pasta-al-limone.html">Pasta al Limone</a>
+        <a href="../blog/roasted-tomato-soup.html">Tomato Soup</a>
+        <a href="../blog/brown-butter-banana-bread.html">Banana Bread</a>
+        <a href="../blog/dal-tadka.html">Dal Tadka</a>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../about/index.html">About</a>
+        <a href="index.html">Contact</a>
+        <a href="../privacy/index.html">Privacy Policy</a>
+        <a href="../terms/index.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Rustic Spoon. All rights reserved.</p>
+      <nav><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a><a href="index.html">Contact</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

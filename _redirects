@@ -1,0 +1,9 @@
+# Cloudflare Pages _redirects
+# Ensure SPA-style routing and clean URL fallbacks
+
+/recipes          /blog/index.html  301
+/recipes/*        /blog/:splat      301
+/about            /about/index.html 301
+/contact          /contact/index.html 301
+/privacy          /privacy/index.html 301
+/terms            /terms/index.html 301
